@@ -1,0 +1,143 @@
+.home {
+
+  .homeContent {
+    background: linear-gradient(115deg, $color-1 50%, transparent 100%);
+    min-height: $minHeight;
+    width: 100%;
+    min-height: 500px;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: 'test';
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      background: url('../../media/try2.jpg') no-repeat center/cover;
+      z-index: -1;
+      filter: brightness(30%);
+    }
+
+    .content {
+      position: absolute;
+      top: 20%;
+      left: 13%;
+      font-family: $font-1;
+
+      h1 {
+        font-size: 5rem;
+        font-family: $font-3;
+        color: $color-5;
+        text-transform: uppercase;
+        text-shadow: 3px 6px 2px $black;
+      }
+      h2 {
+        font-size: 2.5rem;
+        padding: 1.5rem 0 7rem;
+        color: $color-3;
+        text-shadow: 1px 4px 1px $black;
+      }
+      
+    }
+  }
+
+  .homeContent1 {
+    background: #6C77F4;
+    min-height: $minHeight;
+    width: 100%;
+    min-height: 500px;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+    min-height: $minHeight;
+    display: grid;
+    grid-template-columns: 0% 1fr 1fr;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: 
+      "L E E"
+      "O O H";
+
+    &:after {
+      content: 'test';
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      background: #6C77F4;
+      z-index: -1;
+      filter: brightness(30%);
+    }
+
+    .content {
+      position: absolute;
+      top: 20%;
+      left: 13%;
+      font-family: $font-1;
+
+      h1 {
+        font-size: 5rem;
+        font-family: $font-3;
+        color: $color-5;
+        text-transform: uppercase;
+        text-shadow: 3px 6px 2px $black;
+      }
+      h2 {
+        font-size: 2.5rem;
+        padding: 1.5rem 0 7rem;
+        color: $color-3;
+        text-shadow: 1px 4px 1px $black;
+      }
+      .experienceA {
+        grid-area: E;
+        margin: 0 0 .5rem .5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 1fr 1fr;
+        grid-template-areas: 
+          "1"
+          "2"
+          "3";
+        
+        h3 {
+          grid-area: 1;
+        }
+        h4 {
+          font-size: 1.1rem;
+          color: $color-5;
+        }
+        h5 {
+          color: $color-3;
+          padding: 0.5rem 0 0.5rem 1rem;
+        }
+        p {
+          text-align: justify;
+          padding: 0 1rem;
+        }
+        .exp-1 {
+          grid-area: 2;
+        }
+        .exp-2 {
+          grid-area: 3;
+        }
+      }
+      
+    }
+  }
+}
+@media screen and (max-width: 850px){
+  .homeContent {
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width:580px){
+  .homeContent {
+    &:after {
+    }
+    h1 {
+      font-size: 3rem !important;
+    }
+    h2 {
+      font-size: 1.8rem !important;
+    }
+  }
+}
